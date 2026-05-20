@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="assets/images/logo-coffe.avif">
+    <title>KenanganSenja.</title>
+    <!-- Style -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Font -->
+    <link rel="stylesheet" href="css/fonts.css">
+    <!-- icon -->
+    <link rel="stylesheet" href="node_modules/@fortawesome/fontawesome-free/css/all.min.css">
+    <!-- CSS AOS -->
+    <link rel="stylesheet"href="https://unpkg.com/aos@2.3.1/dist/aos.css"/>
+</head>
+
+<body>
+    <!-- Navbar Start -->
+    <nav class="navbar">
+        <a href="#" class="navbar-logo">Kenangan<span>Senja</span></a>
+
+        <div class="navbar-nav">
+            <a href="#home">Home</a>
+            <a href="#about">Tentang Kami</a>
+            <a href="#menu">Menu</a>
+            <a href="#products">Produk</a>
+            <a href="#contact">Kontak</a>
+        </div>
+
+        <div class="navbar-extra">
+            <a href="#" id="search"><i class="fa-solid fa-magnifying-glass icon"></i></a>
+            <a href="#" id="shopping-button"><i class="fa-solid fa-cart-shopping icon"></i></a>
+            <a href="#" id="hamburger-menu"><i class="fa-solid fa-bars icon"></i></a>
+        </div>
+
+        <!-- Search Form Start -->
+        <div class="search-form">
+            <input type="search" id="search-box" placeholder="search here...">
+            <label for="serach-box"><i class="fa-solid fa-magnifying-glass icon"></i></label>
+        </div>
+        <!-- Search Form End -->
+
+        <!-- Shopping Cart Start -->
+        <div class="shopping-cart">
+            <!-- Di isi menggunakan JavaScript -->
+             <!-- <div class="cart-item">
+                <img src="assets/images/product/product-1.jpg" alt="Produk 1">
+                <div class="item-detail">
+                    <h3>Produk 1</h3>
+                    <div class="item-price">IDR 30k</div>
+                </div>
+                <i class="fa-solid fa-trash icon remove-item"></i>
+            </div> -->
+        </div>
+        <!-- Shopping Cart End -->
+
+    </nav>
+    <!-- Navbar End -->
+
+    <!-- Hero Section Start -->
+    <section class="hero" id="home">
+        <main class="content">
+            <h1>Mari Nikmati Secangkir <span>Kopi</span></h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis, vero.</p>
+            <a href="#menu" class="cta">Beli Sekarang</a>
+        </main>
+    </section>
+    <!-- Hero Section End -->
+
+    <!-- About Section Start -->
+    <section class="about" id="about">
+        <h2 data-aos="zoom-in"><span>Tentang</span> Kami</h2>
+
+        <div class="row">
+            <div class="about-img" data-aos="fade-right">
+                <img src="assets/images/tentang-kami.jpg" alt="Tentang Kami">
+            </div>
+            <div class="content" data-aos="fade-left">
+                <h3>Kenapa Memilih Kopi Kami?</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum, ipsam error ea praesentium
+                    necessitatibus perferendis!</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae veritatis tenetur voluptatibus sed
+                    quas, architecto obcaecati illum quaerat aperiam magnam.</p>
+            </div>
+        </div>
+    </section>
+    <!-- About Section End -->
+
+    <!-- Menu Section Start -->
+    <section class="menu" id="menu">
+        <h2 data-aos="fade-up">Menu <span>Kami</span></h2>
+        <p data-aos="fade-up" data-aos-delay="100">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Incidunt vel nulla voluptate fuga tenetur debitis.
+        </p>
+
+        <div class="row">
+
+            <div class="menu-card" data-aos="fade-up">
+                <img src="assets/images/menu/espresso.jpg" alt="Espresso" class="menu-card-img">
+                <h3 class="menu-card-title">- Espresso -</h3>
+                <p class="menu-card-price">IDR 15K</p>
+            </div>
+
+            <div class="menu-card" data-aos="fade-up">
+                <img src="assets/images/menu/espresso.jpg" alt="Espresso" class="menu-card-img">
+                <h3 class="menu-card-title">- Espresso -</h3>
+                <p class="menu-card-price">IDR 15K</p>
+            </div>
+
+            <div class="menu-card" data-aos="fade-up">
+                <img src="assets/images/menu/espresso.jpg" alt="Espresso" class="menu-card-img">
+                <h3 class="menu-card-title">- Espresso -</h3>
+                <p class="menu-card-price">IDR 15K</p>
+            </div>
+
+            <div class="menu-card" data-aos="fade-up">
+                <img src="assets/images/menu/espresso.jpg" alt="Espresso" class="menu-card-img">
+                <h3 class="menu-card-title">- Espresso -</h3>
+                <p class="menu-card-price">IDR 15K</p>
+            </div>
+
+            <div class="menu-card" data-aos="fade-up">
+                <img src="assets/images/menu/espresso.jpg" alt="Espresso" class="menu-card-img">
+                <h3 class="menu-card-title">- Espresso -</h3>
+                <p class="menu-card-price">IDR 15K</p>
+            </div>
+
+            <div class="menu-card" data-aos="fade-up">
+                <img src="assets/images/menu/espresso.jpg" alt="Espresso" class="menu-card-img">
+                <h3 class="menu-card-title">- Espresso -</h3>
+                <p class="menu-card-price">IDR 15K</p>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Menu Section End -->
+
+    <!-- Products Sction Start -->
+    <section class="products" id="products">
+        <h2 data-aos="fade-up">Produk <span>Unggulan</span> Kami</h2>
+        <p data-aos="fade-up" data-aos-delay="100">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit esse aliquam illo laudantium exercitationem
+            eius.</p>
+
+        <div class="row">
+            <div
+            class="product-card"
+            data-id="1"
+            data-name="Coffee Beans 1"
+            data-price="30000"
+            data-image="assets/images/product/product-1.jpg"
+            data-aos="fade-right">
+                <div class="product-icon">
+                    <a href="#" class="add-cart">
+                        <i class="fa-solid fa-cart-shopping icon"></i>
+                    </a>
+                    <a href="#item-detail-modal" id="button-detail"><i class="fa-solid fa-eye icon"></i></a>
+                </div>
+
+                <div class="product-image">
+                    <img src="assets/images/product/product-1.jpg" alt="Produk 1">
+                </div>
+
+                <div class="product-content">
+                    <h3>Coffee Beans 1</h3>
+                    <div class="product-star">
+                        <i class="fa-solid fa-star icon rating"></i>
+                        <i class="fa-solid fa-star icon rating"></i>
+                        <i class="fa-solid fa-star icon rating"></i>
+                        <i class="fa-solid fa-star icon"></i>
+                        <i class="fa-solid fa-star icon"></i>
+                    </div>
+                    <div class="product-price">
+                        IDR 30k <span>IDR 55k</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- <div class="product-card" data-aos="fade-up" data-aos-delay="100">
+                <div class="product-icon">
+                    <a href=""><i class="fa-solid fa-cart-shopping icon"></i></a>
+                    <a href=""><i class="fa-solid fa-eye icon"></i></a>
+                </div>
+
+                <div class="product-image">
+                    <img src="assets/images/product/product-1.jpg" alt="Produk 1">
+                </div>
+
+                <div class="product-content">
+                    <h3>Coffee Beans 1</h3>
+                    <div class="product-star">
+                        <i class="fa-solid fa-star icon rating"></i>
+                        <i class="fa-solid fa-star icon rating"></i>
+                        <i class="fa-solid fa-star icon rating"></i>
+                        <i class="fa-solid fa-star icon rating"></i>
+                        <i class="fa-solid fa-star icon rating"></i>
+                    </div>
+                    <div class="product-price">
+                        IDR 30k <span>IDR 55k</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card" data-aos="fade-left">
+                <div class="product-icon">
+                    <a href=""><i class="fa-solid fa-cart-shopping icon"></i></a>
+                    <a href=""><i class="fa-solid fa-eye icon"></i></a>
+                </div>
+
+                <div class="product-image">
+                    <img src="assets/images/product/product-1.jpg" alt="Produk 1">
+                </div>
+
+                <div class="product-content">
+                    <h3>Coffee Beans 1</h3>
+                    <div class="product-star">
+                        <i class="fa-solid fa-star icon rating"></i>
+                        <i class="fa-solid fa-star icon rating"></i>
+                        <i class="fa-solid fa-star icon"></i>
+                        <i class="fa-solid fa-star icon"></i>
+                        <i class="fa-solid fa-star icon"></i>
+                    </div>
+                    <div class="product-price">
+                        IDR 30k <span>IDR 55k</span>
+                    </div>
+                </div>
+            </div> -->
+        </div>
+    </section>
+    <!-- Products Sction End -->
+
+    <!-- Contact Section Start -->
+    <section class="contact" id="contact">
+        <h2><span>Kontak </span> Kami</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem aut repellat accusamus id quisquam
+            necessitatibus!</p>
+        <div class="row">
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d63338.61724460499!2d112.61173729298494!3d-7.164834453331286!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd800504acb3253%3A0x25d71798cd652fb9!2sGresik%2C%20Kec.%20Gresik%2C%20Kabupaten%20Gresik%2C%20Jawa%20Timur!5e0!3m2!1sid!2sid!4v1760595920326!5m2!1sid!2sid"
+                allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" class="maps"></iframe>
+
+            <form action="">
+                <div class="input-group">
+                    <i class="fa-solid fa-user icon"></i>
+                    <input type="text" placeholder="Masukkan Nama">
+                </div>
+                <div class="input-group">
+                    <i class="fa-solid fa-envelope icon"></i>
+                    <input type="text" placeholder="Masukkan Email">
+                </div>
+                <div class="input-group">
+                    <i class="fa-solid fa-phone icon"></i>
+                    <input type="text" placeholder="Masukkan Nomor Handphone">
+                </div>
+
+                <div class="button">
+                    <button type="submit" class="btn-message">Kirim Pesan</button>
+                </div>
+
+            </form>
+        </div>
+
+    </section>
+    <!-- Contact Section End -->
+
+    <!-- Footer Start -->
+    <footer>
+        <p>© 2025 Fadli Farodis. All rights reserved.</p>
+    </footer>
+    <!-- Footer End -->
+
+    <!-- Modal Box Detail Item Start -->
+    <div class="modal" id="item-detail-modal">
+        <div class="modal-container">
+            <a href="#" class="close-icon" id="close-button">
+                <i class="fa-solid fa-xmark"></i>
+            </a>
+
+            <div class="modal-content">
+                <img src="assets/images/product/product-1.jpg" alt="Produk 1" class="product-image">
+
+                <div class="product-content">
+                    <h3 class="product-title">Produk 1</h3>
+
+                    <p class="product-desc">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate, impedit veritatis.
+                        Modi similique distinctio dolores! Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Iusto, provident.
+                    </p>
+
+                    <div class="product-star">
+                        <i class="fa-solid fa-star rating"></i>
+                        <i class="fa-solid fa-star rating"></i>
+                        <i class="fa-solid fa-star rating"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+
+                    <div class="product-price">
+                        IDR 30k <span>IDR 55k</span>
+                    </div>
+
+                    <a href="#" class="add-to-cart-btn">
+                        <i class="fa-solid fa-cart-shopping"></i>
+                        <span>Add to Cart</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Box Detail Item End -->
+
+
+</body>
+
+<!-- Script JS -->
+<script src="js/script.js"></script>
+<script src="js/scrollReveal.js"></script>
+
+<!-- JS AOS -->
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<!-- sweetalert2 -->
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+<script>
+    AOS.init({
+        duration: 1000,
+        easing: 'ease-in-out',
+        once: true
+    });
+</script>
+
+</html>
