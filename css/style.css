@@ -645,6 +645,53 @@ footer {
     transform: translateY(-2px);
 }
 
+.popup-product {
+    display: flex;
+    gap: 1rem;
+}
+
+.popup-image{
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 1rem;
+}
+
+.name-price {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    text-align: left;
+}
+
+.qty-popup button{
+    width: 20px;
+    height: 20px;
+}
+
+.popup-action {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+
+.popup-action button {
+    padding: .7rem 1.5rem;
+    border-radius: .5rem;
+    cursor: pointer;
+}
+
+#btn-add-to-cart {
+    background-color: var(--primary);
+    color: white;
+}
+
+#btn-cancel {
+    background-color: #6c757d;
+    color: white;
+}
+
 /* Animasi muncul modal */
 @keyframes fadeIn {
     from {

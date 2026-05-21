@@ -59,20 +59,22 @@ const closeButton = document.querySelector('#close-button');
 
 detailButton.onclick = (e) => {
     detailProduct.classList.add('active');
-    e.preventDefault()
+    e.preventDefault();
 }
 
 closeButton.onclick = (e) => {
     detailProduct.classList.remove('active');
-    e.preventDefault()
+    e.preventDefault();
 };
 
 
 
 // CRUD product cart start
 const addCartButtons = document.querySelectorAll('.add-cart');
+console.log(addCartButtons);
 
 let cart = JSON.parse(localStorage.getItem('cart')) || [];
+let qty = 1;
 
 addCartButtons.forEach(button => {
 
@@ -86,21 +88,89 @@ addCartButtons.forEach(button => {
         const price = productCard.dataset.price;
         const image = productCard.dataset.image;
 
-        const existingItems = cart.find(item => item.id === id);
+        qty = 1;
+        
+        Swal.fire({
+            scrollbarPadding: false,
 
-        if(existingItems) {
-            existingItems.qty += 1;
-        } else {
-            cart.push({
-                id,
-                name,
-                price,
-                image,
-                qty: 1
-            });
-        }
-        simpanCart();
-        tampilCart();
+            html: `
+                <div class="popup-product">
+
+                    <img src="${image}" alt="${name}" class="popup-image">
+
+                    <div class="name-price">
+                        <h3>${name}</h3>
+                        <p>Rp. ${price}</p>
+
+                        <div class="qty-popup">
+                            <button id="minus-btn">-</button>
+                            <span id="qty-text">1</span>
+                            <button id="plus-btn">+</button>
+                        </div>
+
+                        <div class="popup-action">
+                            <button id="btn-add-to-cart">Tambahkan</button>
+                            <button id="btn-cancel">Batal</button>
+                        </div>
+
+                    </div>
+                </div>
+            `,
+            showCancelButton: false,
+            showConfirmButton: false,
+
+            didOpen : () => {
+                const minusBtn = document.getElementById('minus-btn');
+                const plusBtn = document.getElementById('plus-btn');
+                const qtyText = document.getElementById('qty-text');
+
+                const cancelBtn = document.getElementById('btn-cancel');
+                const addToCartBtn = document.getElementById('btn-add-to-cart');
+
+                plusBtn.addEventListener('click', () => {
+                    qty++;
+                    qtyText.innerText = qty;
+                });
+
+                minusBtn.addEventListener('click', () => {
+                    if (qty > 1) {
+                        qty--;
+                        qtyText.innerText = qty;
+                    }
+                });
+
+                cancelBtn.addEventListener('click', () => {
+                    Swal.close();
+                });
+
+                addToCartBtn.addEventListener('click', () => {
+                    const existingItemIndex = cart.findIndex(item => item.id === id);
+
+                    if (existingItemIndex !== -1) {
+                        cart[existingItemIndex].qty += qty;
+                    } else {
+                        cart.push({
+                            id,
+                            name,
+                            price,
+                            image,
+                            qty
+                        });
+                    }
+
+                    simpanCart();
+                    tampilCart();
+                    
+                    Swal.fire({
+                        icon: 'success',
+                        title: 'Berhasil!',
+                        text: `${name} telah ditambahkan ke keranjang!`,
+                        showConfirmButton: false,
+                        timer: 1500
+                    })
+                });                
+            }
+        })
     });
 });
 
@@ -144,17 +214,21 @@ function removeItem(index) {
         confirmButtonColor: '#3085d6',
         cancelButtonColor: '#d33',
         confirmButtonText: 'Ya, hapus!',
-        cancelButtonText: 'Batal'
+        cancelButtonText: 'Batal',
+        scrollbarPadding: false
     }).then((result) => {
         if (result.isConfirmed) {
             const item = cart[index];
             cart.splice(index, 1);
 
-            Swal.fire(
-                'Dihapus!',
-                `${item.name} telah dihapus dari keranjang.`,
-                'success'
-            );
+            Swal.fire({
+                icon: 'success',
+                title: 'Dihapus!',
+                text: `${item.name} telah dihapus dari keranjang.`,
+                showConfirmButton: false,
+                timer: 1500,
+                scrollbarPadding: false
+            });
             simpanCart();
             tampilCart();
         } else {
@@ -162,6 +236,7 @@ function removeItem(index) {
             }
     });
 }
+
 
 
 function simpanCart() {
